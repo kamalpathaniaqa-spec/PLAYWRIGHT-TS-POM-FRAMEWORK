@@ -8,7 +8,7 @@ test('ValidateLogin ', async ({ page, loginpage, productlistpage, cartpage }) =>
    //await loginpage.Login();
    await page.goto(TEST_DATA.urls.inventory);
    expect(await page).toHaveURL(TEST_DATA.urls.inventory);
-   await page.waitForTimeout(3000);
+   await page.waitForTimeout(4000);
 
 
 
@@ -21,7 +21,7 @@ test('ValidateAddtoCart', async ({ page, loginpage, productlistpage, cartpage })
     await page.goto(TEST_DATA.urls.inventory);
    expect(await page).toHaveURL(TEST_DATA.urls.inventory);
 
-   await page.waitForTimeout(3000);
+   await page.waitForTimeout(4000);
 
 })
 
@@ -38,6 +38,6 @@ test('VaidateCartIteam', async ({ page, loginpage, productlistpage, cartpage }) 
    expect(await page).toHaveURL(TEST_DATA.urls.cart);
 
    expect(await cartpage.cartProduct).toHaveText('Sauce Labs Bolt T-Shirt');
-   await page.waitForTimeout(3000);
+   await page.waitForTimeout(4000);
 
 })
